@@ -10,6 +10,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     int id;
+
     private String name;
     private String prenom;
     private String password;
@@ -21,7 +22,30 @@ public class User {
     private String status;
     private String CNSS;
     private Date date_paiement;
-    private Date periode;
+    private String periode;
+
+    public User(String name, String prenom, String password, String email, String adresse, String poste, String situation_familiale, String matricule, String status, String CNSS, Date date_paiement, String periode) {
+        this.id = id;
+        this.name = name;
+        this.prenom = prenom;
+        this.password = password;
+        this.email = email;
+        this.adresse = adresse;
+        this.poste = poste;
+        this.situation_familiale = situation_familiale;
+        this.matricule = matricule;
+        this.status = status;
+        this.CNSS = CNSS;
+        this.date_paiement = date_paiement;
+        this.periode = periode;
+    }
+
+    public User() {
+
+    }
+
+
+
 
     int getId(){
         return id;
@@ -30,89 +54,106 @@ public class User {
     public String getName(){
         return name;
     }
-    void setName(String name){
+    public void setName(String name){
         this.name = name;
     }
 
     public String getPrenom(){
         return prenom;
     }
-    void setPrenom(String prenom){
+    public void setPrenom(String prenom){
         this.prenom = prenom;
     }
 
     public String getPassword(){
         return password;
     }
-    void setPassword(){
-        this.password = password;
+    public void setPassword(String password){
+        this.password = this.password;
     }
 
-    public String getEmail(String email){
+    public String getEmail(){
         return email;
     }
-    void setEmail(){
-        this.email = email ;
+    public void setEmail(String email){
+        this.email = this.email;
     }
 
-    public String getAdresse(String adresse){
+    public String getAdresse(){
         return adresse;
     }
-    void setAdresse(){
-        this.adresse = adresse ;
+    public void setAdresse(String adresse){
+        this.adresse = this.adresse;
     }
 
-    public String getPoste(String poste){
+    public String getPoste(){
         return poste;
     }
-    void setPoste(){
-        this.poste = poste ;
+    public  void setPoste(String poste){
+        this.poste = this.poste;
     }
 
-    public String getSituation_familiale(String situation_familiale){
+    public String getSituation_familiale(){
         return  situation_familiale ;
     }
-    void setSituation_familiale(){
+    public  void setSituation_familiale(String situationFamiliale){
         this.situation_familiale = situation_familiale ;
     }
 
-    public String getMatricule(String matricule){
+    public String getMatricule(){
         return matricule ;
     }
-    void setMatricule(){
-        this.matricule = matricule ;
+    public void setMatricule(String matricule){
+        this.matricule = this.matricule;
     }
 
-    public String getStatus(String status){
+    public String getStatus(){
         return status ;
     }
-    void setStatus(){
-        this.status = status ;
+    public  void setStatus(String status){
+        this.status = this.status;
     }
 
-    public String getCNSS(String CNSS){
+    public String getCNSS(){
         return CNSS ;
     }
-    void setCNSS(){
+    public void setCNSS(String cnss){
         this.CNSS = CNSS ;
     }
 
-    public Date getDate_paiement(Date date_paiement){
+    public Date getDate_paiement(){
         return date_paiement ;
     }
-    void setDate_paiement(){
+    public void setDate_paiement(Date datePaiement){
         this.date_paiement = date_paiement ;
     }
 
-     public Date getPeriode(Date periode){
+     public String getPeriode(){
         return periode ;
     }
-    void setPeriode(){
-        this.periode = periode ;
+    public  void setPeriode(String periode){
+        this.periode = this.periode;
     }
 
 
-
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", adresse='" + adresse + '\'' +
+                ", poste='" + poste + '\'' +
+                ", situation_familiale='" + situation_familiale + '\'' +
+                ", matricule='" + matricule + '\'' +
+                ", status='" + status + '\'' +
+                ", CNSS='" + CNSS + '\'' +
+                ", date_paiement=" + date_paiement +
+                ", periode='" + periode + '\'' +
+                '}';
+    }
 
 
 
